@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lttclaw.lttclawplayer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:name="com.lttclaw.Application.MyApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.DeviceDefault.Light" >
+        <activity android:name="com.lttclaw.lttclawplayer.MainActivity">
+           <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lttclaw.lttclawplayer.PlayerActivity"></activity>
+        
+        <service android:name="com.lttclaw.service.PlayerService"
+            android:enabled="true"></service>
+        
+        <receiver android:name="com.lttclaw.receiver.PlayerReceiver"
+            >
+            <intent-filter>
+                <action android:name="com.lttclaw.playerReceiver"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

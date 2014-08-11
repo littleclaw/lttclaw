@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="onClick"
+            android:src="@drawable/audioplayernoartwork" />
+
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView1"
+            android:layout_toRightOf="@+id/imageView1" />
+
+        <ImageButton
+            android:id="@+id/imgbt_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/seekBar1"
+            android:layout_below="@+id/seekBar1"
+            android:layout_marginTop="20dp"
+            android:onClick="onClick"
+            android:src="@drawable/music_previous" />
+
+        <ImageButton
+            android:id="@+id/imgbt_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgbt_pre"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/imgbt_pre"
+            android:onClick="onClick"
+            android:src="@drawable/music_play" />
+
+        <ImageButton
+            android:id="@+id/imgbt_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgbt_play"
+            android:layout_marginLeft="26dp"
+            android:layout_toRightOf="@+id/imgbt_play"
+            android:onClick="onClick"
+            android:src="@drawable/music_next" />
+
+    </RelativeLayout>
+
+</LinearLayout>
